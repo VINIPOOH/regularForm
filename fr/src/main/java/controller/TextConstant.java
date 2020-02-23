@@ -5,5 +5,6 @@ public interface TextConstant {
     String WRONG_INPUT_DATA = "input.wrong.data";
 
     String LAST_NAME_INVITE_MASSAGE = "input.surname.data";
+    String LOGIN_INPUT_MASSAGE="input.login.data";
     String NAME_INVITE_MASSAGE = "input.first.name.data";
 }

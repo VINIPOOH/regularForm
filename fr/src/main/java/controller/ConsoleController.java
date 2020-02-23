@@ -2,13 +2,12 @@ package controller;
 
 
 import model.Model;
+import model.RepeatedLoginException;
 import view.ConsoleView;
 
 import java.util.Scanner;
 
-/**
- * Created by student on 26.09.2017.
- */
+
 public class ConsoleController {
     private Model model;
     private ConsoleView view;
@@ -23,5 +22,11 @@ public class ConsoleController {
         InputNoteNoteBook inputNoteNoteBook =
                 new InputNoteNoteBook(view, sc);
         inputNoteNoteBook.inputNote(view.regularTemplates);
+        try {
+            model.addNote(inputNoteNoteBook.getNote());
+        } catch (RepeatedLoginException e) {
+            this.start();
+        }
     }
+
 }

@@ -1,14 +1,13 @@
 package controller;
 
 
+import dto.NoteDto;
 import view.ConsoleView;
 
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-/**
- * Created by student on 26.09.2017.
- */
+
 public class InputNoteNoteBook implements TextConstant, RegexConstantLinks{
     private ConsoleView view;
     private Scanner sc;
@@ -32,5 +31,11 @@ public class InputNoteNoteBook implements TextConstant, RegexConstantLinks{
         this.firstName =
                 utilityController.inputStringValueAndCheckRegularForms
                         (NAME_INVITE_MASSAGE, regularTemplates.getString(NAME_TEMPLATE));
+        this.login=
+                utilityController.inputStringValueAndCheckRegularForms
+                        (LOGIN_INPUT_MASSAGE, regularTemplates.getString(LOGIN_TEMPLATE));
+    }
+    public NoteDto getNote(){
+        return new NoteDto(lastName,firstName,login);
     }
 }

@@ -3,9 +3,7 @@ package controller;
 import view.ConsoleView;
 import java.util.Scanner;
 
-/**
- * Created by student on 26.09.2017.
- */
+
 public class UtilityController {
     private Scanner scanner;
     private ConsoleView view;
