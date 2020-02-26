@@ -14,14 +14,14 @@ public class ConsoleView implements TextConstant {
     public static final ResourceBundle messages =
             ResourceBundle.getBundle(
                     MESSAGES_BUNDLE_NAME,
-                    new Locale("ua", "UA"));  // Ukrainian
+                    new Locale("uk", "UA"));  // Ukrainian
                     //new Locale("en"));        // English
 
     public static final ResourceBundle regularTemplates =
             ResourceBundle.getBundle(
                     REGULAR_TEMPLATES,
-                    new Locale("ua", "UA"));  // Ukrainian
-    //new Locale("en"));        // English
+                    new Locale("uk", "UA"));  // Ukrainian
+                    //new Locale("en"));        // English
 
 
     public void printMessage(String message){

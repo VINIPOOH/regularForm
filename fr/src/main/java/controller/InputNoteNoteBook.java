@@ -15,6 +15,7 @@ public class InputNoteNoteBook implements TextConstant, RegexConstantLinks{
     private String lastName;
     private String firstName;
     private String login;
+    private String homePhone;
 
     public InputNoteNoteBook(ConsoleView view, Scanner sc) {
         this.view = view;
@@ -34,8 +35,11 @@ public class InputNoteNoteBook implements TextConstant, RegexConstantLinks{
         this.login=
                 utilityController.inputStringValueAndCheckRegularForms
                         (LOGIN_INPUT_MASSAGE, regularTemplates.getString(LOGIN_TEMPLATE));
+        this.homePhone=
+                utilityController.inputStringValueAndCheckRegularForms
+                        (HOME_PHONE_NUMBER_MASSAGE, regularTemplates.getString(HOME_PHONE_NUMBER_TEMPLATE));
     }
     public NoteDto getNote(){
-        return new NoteDto(lastName,firstName,login);
+        return new NoteDto(lastName,firstName,login,homePhone);
     }
 }

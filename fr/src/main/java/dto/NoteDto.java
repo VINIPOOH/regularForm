@@ -4,12 +4,14 @@ public class NoteDto {
     private String lastName;
     private String firstName;
     private String login;
+    private String homePhone;
 
-    public NoteDto(String lastName, final String firstName, final String login) {
+    public NoteDto(String lastName, final String firstName, final String login, String homePhone) {
         super();
         this.lastName = lastName;
         this.firstName = firstName;
         this.login = login;
+        this.homePhone=homePhone;
     }
 
     public String getLastName() {

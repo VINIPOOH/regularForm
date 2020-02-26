@@ -7,4 +7,5 @@ public interface TextConstant {
     String LAST_NAME_INVITE_MASSAGE = "input.surname.data";
     String LOGIN_INPUT_MASSAGE="input.login.data";
     String NAME_INVITE_MASSAGE = "input.first.name.data";
+    String HOME_PHONE_NUMBER_MASSAGE="input.phone.number.data";
 }
